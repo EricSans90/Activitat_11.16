@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class Activitat_16 {
     public static void main(String[] args) {
-        //Supongo un tamaño máximo de 200 nombres
-        String[] nombres = new String[200];
+        //Supongo un tamaño máximo de 200 nombres pero fácilemte modificable
+        int numMaxNombres=200;
+        String[] nombres = new String[numMaxNombres];
         int numNombres = 0;
 
         //Abro el flujo de entrada para leer los nombres existentes en nombres.dat
@@ -36,7 +37,7 @@ public class Activitat_16 {
             //ordeno el Array
             Arrays.sort(nombres);
             //compruebo que no hayamos llegado al máximo arbitrario de 200 nombres
-            if (numNombres == 200) {
+            if (numNombres == numMaxNombres) {
                 System.out.println("Se ha alcanzado el límite máximo de 200 nombres");
                 break;
             }
